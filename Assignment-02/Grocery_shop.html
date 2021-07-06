@@ -1,0 +1,358 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Grocery-shop</title>
+        <meta name="description" content="Information-about-grocery-shop">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <style>
+        *{
+            margin: 0;
+            font-family: arial,Helvetica,sans-serif;
+        }
+        .parrallex{
+            background-image: url('gry1.jpg');
+            background-attachment: fixed;
+            height: max-content;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .page-title{
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            color: white;
+            padding: 50px;
+            font-variant: small-caps;
+            font-size:100px;
+            letter-spacing: 20px;
+            font-family: fantasy;
+        }
+        #sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .menu{
+            background: #184d47;
+            text-align: center;
+        }
+        .menu-ul{
+            margin: 0;
+            padding: 0;
+            display: inline;
+            
+        }
+        .menu-ul li{
+            list-style: none;
+            font-size: 17px;
+            display: inline-block;
+            padding: 25px 25px 26px 25px;
+        }
+        .a-menu{
+            text-decoration: none;
+            color: white;
+        }
+        .menu-ul li:hover{
+            background: #5b8c5a;
+            transform: scale(1.1);
+        }
+        .search-box{
+            border: 1px solid white;
+            border-radius: 50px;
+            background: white;
+            width: max-content;
+            display: inline-block;
+            margin:8px;
+        }
+        .search-box :hover{
+            box-shadow: 0 0 10px 2px #5b8c5a;
+            border: 1px solid #5b8c5a;
+        }
+        .search-input{
+            width: 250px;
+            border: none;
+            font-size: 16px;
+            outline: none; 
+            background: transparent;
+            margin: 10px 0 0 10px;
+        }
+        i{
+            font-size: 20px;
+            margin: 0 10px 0 0;
+        }
+        button{
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+        .container{
+           margin:50px 50px 50px 5%;
+            width: 90%;
+            text-align: center;
+        }
+        .categories{
+            width: max-content;
+            margin:25px;
+            border: 1px solid #184d47;
+            border-radius: 0 0 50px 50px;
+            display: inline-block;
+        }
+        .categories:hover{
+            box-shadow: 0 0 10px 3px #184d47;
+        }
+        .item-image{
+            height: 200px;
+            widows: 200px;
+            border-radius: 0 0 50px 50px;
+            padding: 10px;
+        }
+        .image-title{
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        a{
+            text-decoration: none;
+        }
+        .title{
+            padding:50px;
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: 10px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            
+        }
+        .deal{
+            padding: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            display: inline-block;
+            margin: 20px;
+            max-width: 20%;
+            background: linear-gradient(120deg,#16817a 20%,#cee397 50%,#16817a 90%);
+            
+        }
+        .coupon-btn{
+           border: 1px solid white;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius:20px;
+            
+        }
+        .coupon-btn:hover{
+            box-shadow: 0 0 10 5px white inset;
+        }
+        .Vegetable-container{
+            margin:50px 50px 50px 5%;
+            width: 90%;
+            text-align: center;
+        }
+        
+        h3{
+            text-align: center;
+            color: aqua;
+            
+        }
+        h4{
+            text-align:center;
+            color: palegreen;
+        }
+    </style>
+    <body>
+        <div class="parrallex">
+            <div class="page-title">
+                <h1>Eat Fresh</h1>
+            </div>
+        </div>
+            <div class="menu" id="sticky">
+                <ul class="menu-ul">
+                    <li><a href="#" class="a-menu">Home</a></li>
+                    <li><a href="#" class="a-menu">Deals</a></li>
+                    <li><a href="#veges" class="a-menu">Vegetables</a></li>
+                    <li><a href="#fruits" class="a-menu">Fruits</a></li>
+                    <li><a href="#non-veg" class="a-menu">Meat</a></li>
+                    <li><a href="#" class="a-menu">Cart</a></li>
+                </ul>
+                <div class="search-box">
+                    <form>
+                        <input type="text" placeholder="Search......." name="search" class="search-input"/>
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <!---Main Page---->
+            <div class="container">
+                <a href="#veges">
+                    <div class="categories">
+                        <img src="veges1.jpg" class="item-image"/>
+                        <div class="image-title">Vegetables</div>
+                    </div>
+                </a>
+                <a href="#fruits">
+                    <div class="categories">
+                        <img src="fruits.jpg" class="item-image"/>
+                        <div class="image-title">Fruits</div>
+                    </div>
+                </a>
+                <a href="#non-veg">
+                    <div class="categories">
+                        <img src="meat.jpg" class="item-image"/>
+                        <div class="image-title">Meats & Sea-Foods</div>
+                    </div>
+                </a>
+                <a href="#green-vege">
+                    <div class="categories">
+                        <img src="greenvege.jpg" class="item-image"/>
+                        <div class="image-title">Green leafs</div>
+                    </div>
+                </a>
+                <a href="#green-vege">
+                    <div class="categories">
+                        <img src="sweetcorn.jpg" class="item-image"/>
+                        <div class="image-title">Sweet Corns</div>
+                    </div>
+                </a>
+                <a href="#green-vege">
+                    <div class="categories">
+                        <img src="mushroom.jpg" class="item-image"/>
+                        <div class="image-title">Mushroom</div>
+                    </div>
+                </a>
+                
+            </div>
+            <!---Deals----->
+            <div class="deals-container" id="deals">
+                <div class="parrallex">
+                    <div class="page-title">DEALS</div>
+                    
+                </div>
+                <div class="deal">
+                    Save 20% on minimum purchase of 1000RS on Vegetables<br>
+                    <button class="coupon-btn">Add Coupon</button>
+                </div>
+                 <div class="deal">
+                    Save 20% on minimum purchase of 1000RS on Fruits<br>
+                    <button class="coupon-btn">Add Coupon</button>
+                </div>
+                 <div class="deal">
+                    Save 20% on minimum purchase of 1000RS on Meat and SeaFoods<br>
+                    <button class="coupon-btn">Add Coupon</button>
+                </div>
+             </div>
+              <!-----Vegetables-------->
+               <div class="Vegetable-container">
+                <div class="parrallex">
+                    <div class="page-title">Fresh Vegetables</div>
+                </div>
+                 <div class="page-title">
+                <h6 style="color: black;">Eat Fresh</h6>
+            </div>
+                <a href="#">
+                    <div class="categories">
+                        <img src="beetroot.jpg" class="item-image"/>
+                        <div class="image-title">BeetRoot
+                        <h3>Price</h3>
+                        <h4>1kg=10rs</h4>
+                        </div>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="categories">
+                        <img src="potato.jpg" class="item-image"/>
+                        <div class="image-title">Potatoes
+                        <h3>Price</h3>
+                        <h4>1kg=90rs</h4>
+                        </div>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="categories">
+                        <img src="onion.jpg" class="item-image"/>
+                        <div class="image-title">Onions
+                        <h3>Price</h3>
+                        <h4>1kg=100rs</h4></div>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="categories">
+                        <img src="tomato.jpg" class="item-image"/>
+                        <div class="image-title">Tomatoes
+                        <h3>Price</h3>
+                        <h4>1kg=10rs</h4>
+                        </div>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="categories">
+                        <img src="cabbage.jpg" class="item-image"/>
+                        <div class="image-title">Cabbages
+                        <h3>Price</h3>
+                        <h4>1kg=89rs</h4>
+                        </div>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="categories">
+                        <img src="carrot.jpg" class="item-image"/>
+                        <div class="image-title">Carrots
+                        <h3>Price</h3>
+                        <h4>1kg=70rs</h4>
+                        </div>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="categories">
+                        <img src="brinji.jpg" class="item-image"/>
+                        <div class="image-title">Brinjals</div>
+                        <h3>Price</h3>
+                        <h4>1kg=50rs</h4>
+                    </div>
+                </a>
+                 <a href="#">
+                    <div class="categories">
+                        <img src="spinach.jpg" class="item-image"/>
+                        <div class="image-title">Spinanch
+                        <h3>Price</h3>
+                        <h4>1kg=40rs</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categories">
+                        <img src="chow.jpg" class="item-image"/>
+                        <div class="image-title">Chow Chow
+                        <h3>Price</h3>
+                        <h4>1kg=45rs</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categories">
+                        <img src="peas.jpg" class="item-image"/>
+                        <div class="image-title">Peas
+                        <h3>Price</h3>
+                        <h4>1kg=35rs</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="categories">
+                        <img src="sweetcorn.jpg" class="item-image"/>
+                        <div class="image-title">Sweet Corn
+                        <h3>Price</h3>
+                        <h4>1kg=60rs</h4>
+                        </div>
+                    </div>
+                </a>
+        </div>
+                <div class="parrallex">
+                    <div class="page-title">Hurry Up</div>
+                   </div>
+            
+        
+    </body>
+</html>
